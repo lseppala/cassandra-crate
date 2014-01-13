@@ -6,9 +6,10 @@
   :scm {:url "git@github.com:pallet/cassandra-crate.git"}
 
   :dependencies [[org.clojure/clojure "1.4.0"]
-                 [com.palletops/pallet "0.8.0-beta.6"]
+                 [com.palletops/pallet "0.8.0-RC.6"]
                  [clj-yaml "0.4.0"]]
   :resource {:resource-paths ["doc-src"]
              :target-path "target/classes/pallet_crate/cassandra_crate/"
              :includes [#"doc-src/USAGE.*"]}
+  :plugins [[com.palletops/lein-pallet-crate "0.1.1"]]
   :prep-tasks ["resource" "crate-doc"])
