@@ -235,7 +235,7 @@ over the token-space based on the number of nodes in the group."
            {:name "cassandra"
             :aptitude
             {:url "http://www.apache.org/dist/cassandra/debian"
-             :release (str (string/join "" (take 2 version)) "x")
+             :release (string/replace version "(\d)\.(\d)" "$1$2x")
              :scopes ["main"]
              :key-server "pgp.mit.edu"
              :key-id "2B5C1B00"}}
